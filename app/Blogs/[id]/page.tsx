@@ -1,13 +1,14 @@
-
 import { client } from '@/sanity/lib/client'
 import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 import Comments from '@/app/components/Comments'
 
-const page = async ({params}:any) => {
-    const refine = await client.fetch(`*[_type=="blogs"]`)
-    const specify = refine[params.id-1]
+const page = async  ({ params }:{params:Promise<{id:string}>})  => {
+ 
+  const refine = await client.fetch(`*[_type=="blogs"]`)
+  const {id} = await params
+    const specify = refine[Number(id) - 1]
         console.log(refine)
   return (
     <>
@@ -25,3 +26,5 @@ const page = async ({params}:any) => {
 }
 
 export default page
+
+
