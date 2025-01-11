@@ -31,7 +31,7 @@ const page = async () => {
                     </div>
                     <h1 className='mt-3 font-[600] font-serif text-[#f30202de] text-[20px] mx-5 max-[915px]:text-[14px]'>{item.title}</h1>
 
-                    <p className='mx-5 text-[18px] font-[500] leading-[20px] my-3 max-[950px]:my-2 max-[1050px]:text-[14px] max-[915px]:text-[13px] text-white'>{item.shortdetail}...</p>
+                    <p className='mx-5 text-[18px] font-[500] leading-[20px] my-3 max-[950px]:my-2 max-[1050px]:text-[14px] max-[915px]:text-[13px] text-black'>{item.shortdetail}...</p>
                 </div>
                 </Link>
                 </div>
