@@ -9,7 +9,7 @@ const page = async  ({ params }:{params:Promise<{id:string}>})  => {
   const refine = await client.fetch(`*[_type=="blogs"]`)
   const {id} = await params
   const result = refine.find(
-    (item: any) => String(item.id) === String(id)
+    (item:any) => String(item.id) === String(id)
   );
   return (
     <>
